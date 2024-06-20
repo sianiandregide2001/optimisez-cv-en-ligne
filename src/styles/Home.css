@@ -1,0 +1,63 @@
+body,p {
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 400;
+    color: #444;
+}
+
+
+.home-page {
+  position: relative;
+  min-height: 100vh;
+}
+
+.background-image {
+  background-image: url('https://media.istockphoto.com/id/1206661403/fr/photo/nom-de-john-doe-%C3%A9crit-dans-la-cendre-la-poussi%C3%A8re-ou-la-salet%C3%A9-comme-inconnu.jpg?s=612x612&w=0&k=20&c=ruFlEWPuinDgm17HPPc9FaC3QevV4IXqGlXAE2aUFUQ=');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);  /* Fond noir avec transparence de 0.3 */
+  z-index: 1; /* Correction de la virgule */
+}
+
+.container {
+  position: relative;
+  z-index: 2; 
+  color: white;
+  text-align: center; /* Pour centrer le texte */
+}
+
+.about-section {
+  padding: 60px 0;
+}
+
+.about-section img {
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.progress-bar {
+  background-color: #007bff; /* Couleur de la barre de progression */
+}
+.navLinkHover {
+  background-color: rgba(255, 255, 255, 0.8);
+  transition: background-color 0.3s ease;
+}
+.background-image h1 h2{
+  font-weight: 600;
+  color:#0d6efd;
+
+}
+
+
