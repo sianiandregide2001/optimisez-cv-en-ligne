@@ -1,4 +1,3 @@
-// src/components/ProfileViewer.jsx
 import React, { useState, useEffect } from 'react';
 import ProfileInfo from '../pages/ProfileInfo';
 import '../styles/ProfileViewer.css';

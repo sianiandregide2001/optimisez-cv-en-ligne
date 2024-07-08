@@ -1,5 +1,5 @@
 import React from "react";
-import {Routes, Route, Link } from "react-router-dom";
+import { Routes, Route,} from 'react-router-dom';
 import ProfileViewer from './pages/ProfileViewer';
 import Home from './pages/Home';
 import Services from './pages/Services';
@@ -9,21 +9,15 @@ import Contact from './pages/Contact';
 import Legal from './pages/Legal';
 import Header from './pages/Header';
 import Footer from './pages/Footer';
+import BackToTop from './pages/BackToTop';
+
 
 export default function App() {
   return (
     <div className="App">
-      <ProfileViewer />
       <Header />
-      <nav>
-        <Link to="/Home">Accueil</Link>
-        <Link to="/Services">Services</Link>
-        <Link to="/Portfolio">Portfolio</Link>
-        <Link to="/Blog">Blog</Link>
-        <Link to="/Contact">Contact</Link>
-        <Link to="/Legal">Legal</Link>
-      </nav>
       <Routes>
+        <Route path="/ProfileViewer" element={<ProfileViewer/>}/>
         <Route path="/" element={<Home />} />
         <Route path="/Home" element={<Home />} />
         <Route path="/Services" element={<Services />} />
@@ -33,6 +27,7 @@ export default function App() {
         <Route path="/Legal" element={<Legal />} />
       </Routes>
       <Footer />
+      <BackToTop />
     </div>
   );
 }

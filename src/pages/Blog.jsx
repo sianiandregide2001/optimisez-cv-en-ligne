@@ -1,68 +1,83 @@
-import React from 'react';
-import '../styles/Blog.css';
+// src/components/Blog.js
 
-export default function Blog() {
+import React from 'react';
+import BlogItem from './BlogItem';
+import '../styles/Blog.css';
+import htmlCssImage from '../images/code_html.jpg';
+import vendreWebImage from '../images/vendre_web.jpg';
+import googlePositionImage from '../images/google_position.jpg';
+import responsiveDesignImage from '../images/responsive_design.png';
+import referencementImage from '../images/referencement.jpg';
+import apprendreCoderImage from '../images/apprendre_coder.jpeg';
+
+const Blog = () => {
   const articles = [
     {
-      id: 1,
-      title: 'Premier pas en CSS3 et HTML5',
-      excerpt: 'Ceci est un extrait de l\'article 1.',
-      imageUrl: 'https://via.placeholder.com/300x200',
-      link: '/blog/article1'
+      image: htmlCssImage,
+      title: 'Coder son site en HTML/CSS',
+      description: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.',
+      date: '22 août 2022',
+      link: '#'
     },
     {
-      id: 2,
-      title: 'Apprendre javascript',
-      excerpt: 'Ceci est un extrait de l\'article 2.',
-      imageUrl: 'https://via.placeholder.com/300x200',
-      link: '/blog/article2'
+      image: vendreWebImage,
+      title: 'Vendre ses produits sur le web',
+      description: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.',
+      date: '20 août 2022',
+      link: '#'
     },
     {
-      id: 3,
-      title: 'Coder avec vuejs3',
-      excerpt: 'Ceci est un extrait de l\'article 2.',
-      imageUrl: 'https://via.placeholder.com/300x200',
-      link: '/blog/article3'
+      image: googlePositionImage,
+      title: 'Se positionner sur Google',
+      description: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.',
+      date: '1 août 2022',
+      link: '#'
     },
     {
-      id: 4,
-      title: 'React pour débutant',
-      excerpt: 'Ceci est un extrait de l\'article 2.',
-      imageUrl: 'https://via.placeholder.com/300x200',
-      link: '/blog/article4'
+      image: responsiveDesignImage,
+      title: 'Coder en responsive design',
+      description: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.',
+      date: '31 juillet 2022',
+      link: '#'
     },
     {
-      id: 5,
-      title: 'Le référencement SEO',
-      excerpt: 'Ceci est un extrait de l\'article 2.',
-      imageUrl: 'https://via.placeholder.com/300x200',
-      link: '/blog/article5'
+      image: referencementImage,
+      title: 'Techniques de référencement',
+      description: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.',
+      date: '30 juillet 2022',
+      link: '#'
     },
     {
-      id: 6,
-      title: 'Figma design',
-      excerpt: 'Ceci est un extrait de l\'article 2.',
-      imageUrl: 'https://via.placeholder.com/300x200',
-      link: '/blog/article6'
-    },
-  
+      image: apprendreCoderImage,
+      title: 'Apprendre à coder',
+      description: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.',
+      date: '12 juillet 2022',
+      link: '#'
+    }
   ];
 
   return (
-    <div className="blog-page">
-      <h1>Blog</h1>
-      <div className="articles-container">
-        {articles.map((article) => (
-          <div key={article.id} className="article-card">
-            <img src={article.imageUrl} alt={article.title} className="article-image" />
-            <div className="article-content">
-              <h2 className="article-title">{article.title}</h2>
-              <p className="article-excerpt">{article.excerpt}</p>
-              <a href={article.link} className="read-more">Lire plus</a>
-            </div>
-          </div>
+    <div className="blog">
+      <div className="blog-background"></div>
+      <div className="blog-header">
+        <h2>BLOG</h2>
+        <p>Retrouvez ici quelques articles sur le développement web.</p>
+        <hr />
+      </div>
+      <div className="blog-items">
+        {articles.map((article, index) => (
+          <BlogItem
+            key={index}
+            image={article.image}
+            title={article.title}
+            description={article.description}
+            date={article.date}
+            link={article.link}
+          />
         ))}
       </div>
     </div>
   );
-}
+};
+
+export default Blog;

@@ -1,0 +1,25 @@
+/* BackToTop.css */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #444; /* Couleur de fond par défaut */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    display: none; /* Cacher par défaut */
+    z-index: 1000;
+    transition: background-color 0.3s ease; /* Transition douce pour la couleur de fond */
+  }
+  
+  .back-to-top.show {
+    display: block; /* Afficher le bouton lorsqu'il est visible */
+  }
+  
+  .back-to-top:hover {
+    background-color: #298eff; /* Couleur de fond au survol */
+  }
+  

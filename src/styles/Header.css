@@ -1,70 +1,74 @@
 body {
   font-family: 'Nunito Sans', sans-serif;
   font-weight: 400;
-    color: #444;
+  color: #EEE;
 }
 
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #0d6efd;
-  }
-  
-  .logo {
-    font-size: 24px;
-    font-weight: bold;
-  }
-  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #444;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav ul li {
+  margin-right: 20px;
+}
+
+.nav ul li a {
+  text-decoration: none;
+  color: #b0f2b6;
+  text-transform: uppercase; /* Texte en majuscule */
+  transition: color 0.3s ease; /* Ajout de la transition pour un effet lisse */
+}
+
+.nav ul li a:hover {
+  color: rgba(255, 255, 255, 0.8); /* Blanc avec une transparence de 0.8 */
+}
+
+.nav ul li.active a {
+  color: #007bff; /* Couleur pour l'élément actif */
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #000;
+  margin: 4px 0;
+}
+
+/* Styles pour mobile et tablette */
+@media (max-width: 768px) {
   .nav ul {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .nav ul li {
-    margin-right: 20px;
-  }
-  
-  .nav ul li a {
-    text-decoration: none;
-    color: #000;
-    text-transform: uppercase; /* Texte en majuscule */
-  }
-  
-  .nav ul li.active a {
-    color: #007bff; /* Couleur pour l'élément actif */
-  }
-  
-  .hamburger {
-    display: none;
+    display: none; /* Cache la navigation par défaut */
     flex-direction: column;
-    cursor: pointer;
   }
-  
-  .hamburger .bar {
-    width: 25px;
-    height: 3px;
-    background-color: #000;
-    margin: 4px 0;
-  }
-  
-  /* Styles pour mobile et tablette */
-  @media (max-width: 768px) {
-    .nav ul {
-      display: none; /* Cache la navigation par défaut */
-      flex-direction: column;
-    }
-  
-    .hamburger {
-      display: flex;
-    }
-  }
-  
-  /* Afficher la navigation lors du clic sur l'icône hamburger */
-  .hamburger.active + .nav ul {
+
+  .hamburger {
     display: flex;
   }
-  
+}
+
+/* Afficher la navigation lors du clic sur l'icône hamburger */
+.hamburger.active + .nav ul {
+  display: flex;
+}

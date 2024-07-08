@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import '@fortawesome/fontawesome-free/css/all.min.css';
 import '../styles/Footer.css';
 
 export default function Footer() {
@@ -21,11 +22,12 @@ export default function Footer() {
 
   return (
     <footer className="footer">
-      <div className="footer-columns">
-        <div className="footer-column">
-          <h4> <strong>John Doe</strong> </h4>
-          <address><p>40 Rue Laure Diebold<br />69009 Lyon<br />France</p></address>
-          <p>Téléphone : +33 06 20 30 40 50</p>
+      <div className="footer-content">
+        <div className="footer-section">
+          <h4>John Doe</h4>
+          <p>40 Rue Laure Diebold</p>
+          <p>69009 Lyon, France</p>
+          <p>Téléphone : 06 20 30 40 50</p>
           <div className="social-icons">
             <a href="https://github.com/johndoe" target="_blank" rel="noopener noreferrer">
               <i className="fab fa-github"></i>
@@ -38,42 +40,35 @@ export default function Footer() {
             </a>
           </div>
         </div>
-        <div className="footer-column">
-          <h4> <strong>Liens utiles</strong> </h4>
+        <div className="footer-section">
+          <h4>Liens utiles</h4>
           <ul>
-            <li><a href="/">Accueil</a></li>
-            <li><a href="/services">Services</a></li>
-            <li><a href="/portfolio">Portfolio</a></li>
-            <li><a href="/contact">Contact</a></li>
-            <li><a href="/legal">Legal</a></li>
+            <li> <i className="fas fa-chevron-right"></i>Accueil</li>
+            <li> <i className="fas fa-chevron-right"></i>À propos</li>
+            <li><i className="fas fa-chevron-right"></i>Services</li>
+            <li><i className="fas fa-chevron-right"></i>Me contacter</li>
+            <li><i className="fas fa-chevron-right"></i>Mentions légales</li>
           </ul>
         </div>
-        <div className="footer-column">
-          <h4>  <strong> Mes derniers réalisations</strong></h4>
+        <div className="footer-section">
+          <h4>Mes dernières réalisations</h4>
           <ul>
-            <li><a href="/portfolio/project1">chaine youtube</a></li>
-            <li><a href="/portfolio/project2">Mon portfolio</a></li>
-            <li><a href="/portfolio/project3">Restaurant Ubereat</a></li>
+            <li><i className="fas fa-chevron-right"></i>Fresh food</li>
+            <li><i className="fas fa-chevron-right"></i>Restaurant Akira</li>
+            <li><i className="fas fa-chevron-right"></i>Espace bien-être</li>
           </ul>
         </div>
-        <div className="footer-column">
-          <h4><strong>Mes derniers articles</strong></h4>
+        <div className="footer-section">
+          <h4>Mes derniers articles</h4>
           <ul>
-            <li><a href="/blog/article1">Premier pas en CSS3 et HTML5</a></li>
-            <li><a href="/blog/article2">Apprendre javascript</a></li>
-            <li><a href="/blog/article3">coder avec vuejs3</a></li>
-            <li><a href="/blog/article3">React pour débutant</a></li>
-            <li><a href="/blog/article3">Le référencement SEO</a></li>
-            <li><a href="/blog/article3">Figma design</a></li>
-
+            <li><i className="fas fa-chevron-right"></i>Coder son site en HTML/CSS</li>
+            <li><i className="fas fa-chevron-right"></i>Vendre ses produits sur le web</li>
+            <li><i className="fas fa-chevron-right"></i>Se positionner sur Google</li>
           </ul>
         </div>
       </div>
       <div className="footer-bottom">
-        <p>&copy; 2024 John Doe. Tous droits réservés.</p>
-        {showScrollTop && (
-          <a href="#top" className="scroll-top">Haut de page</a>
-        )}
+        <p>&copy; Designed by John Doe</p>
       </div>
     </footer>
   );

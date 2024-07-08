@@ -1,47 +1,57 @@
 import React from 'react';
+import PortfolioItem from './PortfolioItem';
 import '../styles/Portfolio.css';
+import freshFoodImage from '../images/freshfood.jpeg';
+import restaurantAkiraImage from '../images/akira.jpeg';
+import espaceBienEtreImage from '../images/espace bien etre.jpeg';
 
-export default function Portfolio() {
-  const projects = [
+const Portfolio = () => {
+  const items = [
     {
-      id: 1,
-      title: 'Chaine youtube',
-      description: 'Description du projet 1.',
-      imageUrl: 'https://via.placeholder.com/300x200',
-      link: '/portfolio/project1'
+      image: freshFoodImage,
+      title: 'Fresh food',
+      description: 'Réalisation d\'un site avec commande en ligne.',
+      technology: 'Site réalisé avec PHP et MySQL',
+      link: '#'
     },
     {
-      id: 2,
-      title: 'Mon portfolio',
-      description: 'Description du projet 2.',
-      imageUrl: 'https://via.placeholder.com/300x200',
-      link: '/portfolio/project2'
+      image: restaurantAkiraImage,
+      title: 'Restaurant Akira',
+      description: 'Réalisation d\'un site vitrine.',
+      technology: 'Site réalisé avec WordPress',
+      link: '#'
     },
     {
-      id: 3,
-      title: 'Restaurant Ubereat',
-      description: 'Description du projet 3.',
-      imageUrl: 'https://via.placeholder.com/300x200',
-      link: '/portfolio/project3'
-    },
-    
+      image: espaceBienEtreImage,
+      title: 'Espace bien-être',
+      description: 'Réalisation d\'un site vitrine pour un patricien de bien-être.',
+      technology: 'Site réalisé en HTML/CSS',
+      link: '#'
+    }
   ];
 
   return (
-    <div className="portfolio-page">
-      <h1>Portfolio</h1>
-      <div className="projects-container">
-        {projects.map((project) => (
-          <div key={project.id} className="project-card">
-            <img src={project.imageUrl} alt={project.title} className="project-image" />
-            <div className="project-content">
-              <h2 className="project-title">{project.title}</h2>
-              <p className="project-description">{project.description}</p>
-              <a href={project.link} className="view-more">Voir plus</a>
-            </div>
-          </div>
+    <div className="portfolio">
+      <div className="portfolio-background"></div>
+      <div className="portfolio-header">
+        <h2>PORTFOLIO</h2>
+        <p>Voici quelques-unes de mes réalisations.</p>
+        <hr />
+      </div>
+      <div className="portfolio-items">
+        {items.map((item, index) => (
+          <PortfolioItem
+            key={index}
+            image={item.image}
+            title={item.title}
+            description={item.description}
+            technology={item.technology}
+            link={item.link}
+          />
         ))}
       </div>
     </div>
   );
-}
+};
+
+export default Portfolio;

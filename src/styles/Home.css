@@ -1,63 +1,156 @@
-body,p {
+body {
   font-family: 'Nunito Sans', sans-serif;
-  font-weight: 400;
-    color: #444;
-}
-
-
-.home-page {
-  position: relative;
-  min-height: 100vh;
-}
-
-.background-image {
-  background-image: url('https://media.istockphoto.com/id/1206661403/fr/photo/nom-de-john-doe-%C3%A9crit-dans-la-cendre-la-poussi%C3%A8re-ou-la-salet%C3%A9-comme-inconnu.jpg?s=612x612&w=0&k=20&c=ruFlEWPuinDgm17HPPc9FaC3QevV4IXqGlXAE2aUFUQ=');
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.3);  /* Fond noir avec transparence de 0.3 */
-  z-index: 1; /* Correction de la virgule */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-weight:400;
 }
 
 .container {
-  position: relative;
-  z-index: 2; 
+  width: 100%;
+  margin: 0 auto;
+}
+
+.hero-section {
+  background: url('https://res.cloudinary.com/mediaschool/image/upload/v1/Image%20SDW/software-developer-g51594fcd8_1920_gdibcr') no-repeat center center/cover;
   color: white;
-  text-align: center; /* Pour centrer le texte */
+  text-align: center;
+  padding: 100px 0;
 }
 
-.about-section {
-  padding: 60px 0;
-}
-
-.about-section img {
-  border-radius: 50%;
+.hero-content h1 {
+  margin-left:90px;
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight:600;
+  color:#fff;
+  font-size: 2.5rem;
   margin-bottom: 20px;
 }
 
+.hero-content h2 {
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight:600;
+  color:#fff;
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+  
+}
+
+.btn-primary {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.about {
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.about-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.about-text, .about-skills {
+  flex: 1;
+  padding: 20px;
+}
+
+.about-text h2 {
+  font-family: 'Nunito Sans', sans-serif;
+  margin-bottom: 15px;
+  font-weight:600;
+
+}
+
+.about-text p {
+  color: #333;
+  margin-bottom: 15px;
+}
+.about-text hr{
+  width: 750px;
+  border: 2px solid #0069ff;
+  margin: 20px auto;
+}
+
+.about-skills img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.about-skills h3 {
+  font-size: 1.5em;
+  margin-bottom: 15px;
+}
+
+.skill {
+  margin-bottom: 15px;
+}
+
+.skill span {
+  display: block;
+  font-size: 1em;
+  margin-bottom: 5px;
+}
+
 .progress-bar {
-  background-color: #007bff; /* Couleur de la barre de progression */
-}
-.navLinkHover {
-  background-color: rgba(255, 255, 255, 0.8);
-  transition: background-color 0.3s ease;
-}
-.background-image h1 h2{
-  font-weight: 600;
-  color:#0d6efd;
-
+  background: #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
+.progress {
+  height: 10px;
+  border-radius: 8px;
+}
 
+.html5 {
+  width: 90%;
+  background: #e44d26;
+}
+
+.css3 {
+  width: 80%;
+  background: #264de4;
+}
+
+.javascript {
+  width: 70%;
+  background: #f0db4f;
+}
+
+.php {
+  width: 60%;
+  background: #777bb3;
+}
+
+.react {
+  width: 50%;
+  background: #61dbfb;
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-text, .about-skills {
+    width: 100%;
+  }
+
+  .about-skills img {
+    max-width: 100%;
+  }
+}

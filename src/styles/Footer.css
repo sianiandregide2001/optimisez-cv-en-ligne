@@ -13,73 +13,91 @@ strong{
 
 }
 .footer {
-    background-color: #f8f9fa;
-    padding: 20px;
-    text-align: left;
-  }
-  
-  .footer-columns {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  
-  .footer-column {
-    flex: 1;
-    margin: 10px;
-  }
-  
-  .footer-column h4 {
-    font-size: 18px;
-    margin-bottom: 10px;
-  }
-  
-  .footer-column ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .footer-column ul li {
-    margin-bottom: 5px;
-  }
-  
-  .footer-column ul li a {
-    text-decoration: none;
-    color: #000;
-  }
-  
-  .footer-column ul li a:hover {
-    text-decoration: underline;
-  }
-  
-  .social-icons {
-    display: flex;
-    gap: 10px;
-  }
-  
-  .social-icons a {
-    color: #000;
-    font-size: 20px;
-  }
-  
-  .footer-bottom {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 10px;
-    border-top: 1px solid #ddd;
-  }
-  
-  .footer-bottom p {
-    margin: 0;
-  }
-  
-  .scroll-top {
-    text-decoration: none;
-    color: #007bff;
-    cursor: pointer;
-  }
-  
-  .scroll-top:hover {
-    text-decoration: underline;
-  }
+  background-color: #f8f8f8;
+  padding: 20px 0;
+  color: #333;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.footer-section {
+  flex: 1;
+  margin: 10px;
+  min-width: 220px;
+}
+
+.footer-section h4 {
+  margin-bottom: 15px;
+}
+
+.footer-section p,
+.footer-section ul,
+.footer-section li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer-section ul {
+  margin-top: 10px;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+  text-decoration: underline;
+}
+
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-icons a {
+  margin: 0 10px;
+  color: #333;
+  font-size: 20px;
+}
+
+.footer-bottom {
+  margin-top: 20px;
+  border-top: 1px solid #ddd;
+  padding-top: 10px;
+  font-size: 14px;
+}
+
+.footer-bottom p {
+  margin: 0;
+  background-color:#000;
+  padding:5px;
+  color:#fff;
+}
+
+.scroll-top {
+  display: block;
+  margin-top: 10px;
+  text-decoration: none;
+  color: #007BFF;
+}
+
+.scroll-top:hover {
+  text-decoration: underline;
+}
+.footer-section .fas {
+  margin-right: 10px;
+  color:#0d6efd;
+}
   
